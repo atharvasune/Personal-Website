@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { Image } from "mui-image";
 
-import personal_photo from "/Users/atharvasune/Desktop/Project/personal-website/src/assets/personal_photo.jpeg";
+import personal_photo from "/Users/atharvasune/Desktop/Project/personal-website/src/assets/images/personal_photo.jpeg";
 
 function Header() {
 
