@@ -3,26 +3,25 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-import ContactMe from "./contact_me";
-import PersonalMe from "./personal_me";
-import TechMe from "./tech_me";
+import ContactMe from "./ContactMe/contact_me";
+import TechMe from "./TechMe/index";
 
 import { useState } from "react";
 
 export default function HomePage() {
   const [tabValue, setTabValue] = useState(0);
-
+  // React.useEffect(() => {
+  //   alert("This is V1 of the website, the design is not the best, and I assure you I am working on improving it. 😅")
+  // }, [])
   return (
     <section
       style={{
-        width: "90%",
-        margin: "auto",
-        marginBottom: "2vh",
-        height: "60vh",
+        width: "100%",
+        marginLeft: "1%",
         background: "white",
+        height: "96vh",
         borderRadius: "8px",
         boxShadow: "0 0 8px rgb(200,200,200)",
-        marginTop: "2vh",
       }}
     >
       <Tabs
@@ -35,7 +34,7 @@ export default function HomePage() {
           borderBottom: "1px solid lightgray",
         }}
       >
-        {["Tech Me", "Personal Me", "Contact Me"].map((text, index) => (
+        {["Tech Me", "Contact Me"].map((text, index) => (
           <Tab
             label={text}
             key={index}
@@ -43,7 +42,7 @@ export default function HomePage() {
               textTransform: "none",
               fontSize: "22px",
               color: "black",
-              fontFamily: "Roboto",
+              fontFamily: "Space Mono",
               width: "25%",
             }}
           />
@@ -51,8 +50,6 @@ export default function HomePage() {
       </Tabs>
       {tabValue === 0 ? (
         <TechMe />
-      ) : tabValue === 1 ? (
-        <PersonalMe />
       ) : (
         <ContactMe />
       )}

@@ -4,18 +4,21 @@
         "image" : "https://kenzie.snhu.edu/wp-content/uploads/2021/02/2021-02-19-16_16_49-MERN-Stack-Visualized-660x391.png",
         "description": 
             "Started as a course project (group project) for the Software Engineering Course - a web application to make the donation drives for NGO's easy. To implement it, we used the MERN stack, but more than the technical stuff, this project helped understand how software dev happens in a team - we followed the agile method of development (SCRUM). ",
-        "githubLink": ""
+        "githubLink": "",
+        "type": "personal"
     },
     {
         "title" : "Recommender Systems",
         "image" : "https://www.researchgate.net/publication/220827211/figure/fig2/AS:394007092973580@1470950019808/Structure-of-a-recommender-system.png",
         "description" : "This was another fun project I did as part of the Information Retrieval course and as the name suggests, literally implemented recommender systems. Not Netflix level 😬, simpler ones, but all from scratch. Implemented in Python and the only libraries I used were Numpy, Pandas and NLTK (strictly for text processing).",
-        "githubLink" : "https://github.com/atharvasune/Recommender-System"
+        "githubLink" : "https://github.com/atharvasune/Recommender-System",
+        "type": "personal"
     },
     {
         "title" : "Research Buddy",
         "image" : "https://i.ytimg.com/vi/hGZX_SA7lYg/maxresdefault.jpg",
         "description" : "A web application, that stored information regarding academic research papers, and then retrieved the required ones based on SQL Query. Used MySQL for the DB and ExpressJs for the application, ejs templating language for the front end",
-        "githubLink" : "https://github.com/ameya-salankar/ResearchBuddy"
+        "githubLink" : "https://github.com/ameya-salankar/ResearchBuddy",
+        "type": "personal"
     }
 ]

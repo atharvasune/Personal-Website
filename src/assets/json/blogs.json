@@ -1,0 +1,32 @@
+[
+    {
+        "title": "NextJs: I think I am in Love ❤️",
+        "link": "https://atharvasune.medium.com/next-js-i-think-i-am-in-love-%EF%B8%8F-3953b661ec16",
+        "description": "Hi… This post is exactly what it sounds like, another developer going on about how much he appreciates and likes Next.js. So, if you have…",
+        "image": "https://miro.medium.com/max/720/0*lzTJWx5C2i2iJhBe.png"
+    },
+    {
+        "title": "Apache Lucene: The First Part",
+        "link": "https://atharvasune.medium.com/apache-lucene-the-first-part-9e79611f0f86",
+        "description": "Hi, am back after quite some time. My last article was on Next.Js and I had planned a couple more posts on the same, building a project…",
+        "image": "https://miro.medium.com/max/720/1*DoJYmwrluE1HH4vtWcx9KA.png"
+    },
+    {
+        "title": "Apache Lucene:Part Two - Indexing Concepts",
+        "link": "https://atharvasune.medium.com/apache-lucene-part-two-indexing-concepts-24c0a7fd8605",
+        "description": "The previous article Apache Lucene: The First Part , was a brief introduction of what Lucene is and a high level overview of how it works…",
+        "image": "https://miro.medium.com/max/720/1*vJ3Sj9Mt6I1LX1-59E91CQ.png"
+    },
+    {
+        "title": "Apache Lucene:Part Three - Indexing",
+        "link": "https://atharvasune.medium.com/apache-lucene-part-three-indexing-773f5b0dc492",
+        "description": "Here we are .. Part three — Indexing.  The focus of this article is going to be understanding how indexing happens in Lucene, some…",
+        "image": "https://miro.medium.com/max/720/1*JF-MV9Q8vIsvrsdhVteaYA.jpeg"
+    },
+    {
+        "title": "Apache Lucene:Part Four - Searching",
+        "link": "https://atharvasune.medium.com/apache-lucene-part-4-searching-27f046a98405",
+        "description": "Welcome back, for the fourth part of Apache Lucene. The first three parts dealt with the details related to indexing, and how to index and…",
+        "image": "https://miro.medium.com/max/600/0*GXpofxQWAros7E3w.jpg"
+    }
+]
