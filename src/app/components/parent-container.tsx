@@ -1,3 +1,5 @@
+import React from "react";
+
 import Link from "next/link";
 
 function NavLink({ path, text, currentPath }: { path: String, text: String, currentPath: String }) {
@@ -5,15 +7,15 @@ function NavLink({ path, text, currentPath }: { path: String, text: String, curr
 
     return (
         <Link href={`/${path}`}>
-            <text className={`text-2xl font-mono ${currentPathClass}`}>
+            <text className={`text-xl font-mono ${currentPathClass}`}>
                 {text}
             </text>
         </Link>
     )
 }
 
-export function TopNav({ path }: { path: String }) {
-    return (
+function TopNav({ path, show }: { path: String, show: Boolean }) {
+    return !show ? <></> : (
         <section className="h-14 p-6 pt-6 flex justify-between items-center">
             <Link href="/">
                 <div className="flex justify-between items-center px-4">
@@ -30,4 +32,17 @@ export function TopNav({ path }: { path: String }) {
             </div>
         </section>
     );
+}
+
+
+export default function ParentContainer({ show, path, children }: { show: Boolean, path: String, children: React.ReactNode }) {
+    const lowerDivHeight = show ? "h-[calc(100vh-3.5rem)]" : "h-screen h-full";
+    return (
+        <main className="min-h-screen max-h-screen h-screen">
+            <TopNav show={show} path={path} />
+            <div className={`${lowerDivHeight} border border-white border-solid`}>
+                {children}
+            </div>
+        </main>
+    )
 }

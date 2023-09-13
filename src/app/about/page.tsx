@@ -1,8 +1,8 @@
-import { TopNav } from "../components/top-nav";
+import ParentContainer from "../components/parent-container";
 export default function About() {
     return (
-        <section>
-            <TopNav path={"about"} />
-        </section>
+        <ParentContainer show={true} path={"about"}>
+
+        </ParentContainer>
     )
 }

@@ -1,7 +1,9 @@
-import { TopNav } from "../components/top-nav";
+import ParentContainer from "../components/parent-container";
 
-export default function Blogs() {
+export default function Contact() {
     return (
-        <TopNav path={"contact"} />
+        <ParentContainer show={true} path={"contact"}>
+
+        </ParentContainer>
     )
 }
