@@ -27,8 +27,8 @@ export default async function BlogCard({ title, tags, img, mediumLink }: { title
                     </text>
                 </div>
                 <div className="flex justify-start flex-wrap items-start">
-                    {tags.map((tag) => (
-                        <div className="bg-slate-400 px-2 py-1 rounded-full text-sm mx-1 my-1">
+                    {tags.map((tag, idx) => (
+                        <div className="bg-slate-400 px-2 py-1 rounded-full text-sm mx-1 my-1" key={idx}>
                             #{tag}
                         </div>
                     ))}

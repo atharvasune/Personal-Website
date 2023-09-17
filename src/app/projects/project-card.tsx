@@ -17,8 +17,8 @@ export default async function ProjectCard({ projectName, languages, githubUrl, d
                     </text>
                 </div>
                 <div className="w-full flex justify-start">
-                    {Object.keys(languages).map((lang) => (
-                        <div className="bg-slate-400 px-2 py-1 rounded-full text-sm mx-1 my-1">
+                    {Object.keys(languages).map((lang, idx) => (
+                        <div className="bg-slate-400 px-2 py-1 rounded-full text-sm mx-1 my-1" key={idx}>
                             {lang}
                         </div>
                     ))}
