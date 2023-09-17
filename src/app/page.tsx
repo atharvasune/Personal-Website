@@ -9,7 +9,7 @@ const rubikMonoOne = Rubik_Mono_One({weight: "400", style: "normal", display: "s
 
 function NavigationText(props: { text: string }) {
   return (
-    <div className={`text-white text-2xl ${jetBrainsMono.className}`}>
+    <div className={`text-white text-base md:text-2xl ${jetBrainsMono.className} hover:text-green-500`}>
       {props.text}
     </div>
   )
@@ -17,13 +17,13 @@ function NavigationText(props: { text: string }) {
 
 export default function Home() {
   return (
-    <ParentContainer show={false} path={"/"}>
+    <ParentContainer show={false} path={"/"} showBorder={false}>
         <div className={`mx-auto min-w-full`} style={{ minHeight: "90%", maxHeight: "90%", display: "flex", alignItems: "center" }}>
           <div className='text-center mx-auto h-full' style={{ minHeight: "100%", maxHeight: "100%" }}>
-            <text className='text-center font-mono text-6xl text-white'>
+            <text className='text-center font-mono text-4xl md:text-6xl text-white'>
               I AM
             </text>
-            <div className={`min-w-full text-6xl text-green-600 ${rubikMonoOne.className}`} style={{ marginTop: "15px" }}>
+            <div className={`min-w-full max-w-full break-normal text-4xl md:text-6xl text-green-600 ${rubikMonoOne.className}`} style={{ marginTop: "15px" }}>
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter.typeString("A FULL STACK DEVELOPER")
@@ -42,15 +42,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='w-5/12 mx-auto' style={{ minHeight: "10%", maxHeight: "10%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div className='px-2 pb-4 md:pb-0 w-full md:w-5/12 mx-auto min-h-[10%] max-h-[10%] h-[10%] flex items-end md:items-center justify-between'>
           <Link href="/about">
             <NavigationText text={"About"} />
           </Link>
+          <Link href="/blogs">
+            <NavigationText text='Blogs' />
+          </Link>
           <Link href="/projects">
             <NavigationText text='Projects' />
-          </Link>
-          <Link href="/blogs">
-            <NavigationText text='Blog' />
           </Link>
           <Link href="/work">
             <NavigationText text='Work' />

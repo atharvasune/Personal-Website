@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NotFound() {
     return (
-        <main className="grid gap-5 h-screen place-content-center">
+        <main className="grid gap-5 h-[calc(100%-10rem)] place-content-center">
 
             <div className="text-white text-4xl font-sans text-center">
             Hey, I am working on this part of the website.

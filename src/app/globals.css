@@ -26,3 +26,28 @@ body {
     )
     rgb(var(--background-start-rgb)); */
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  margin-block: 10em;
+  border-radius: 2em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  margin-block: 10em;
+  border-radius: 2em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  background: gray;
+  border-radius: 2em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

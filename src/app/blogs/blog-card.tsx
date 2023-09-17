@@ -1,38 +1,42 @@
 import Image from "next/image"
 
-export default async function BlogCard() {
-
+export default async function BlogCard({ title, tags, img, mediumLink }: { title: string, tags: string[], img?: string, mediumLink: string }) {
+    const headers = new Headers()
+    headers.append("Authorization", process.env.PEXELS_API_KEY ? process.env.PEXELS_API_KEY : "");
+    if (img === undefined) {
+        const response = await (await fetch("https://api.pexels.com/v1/curated", {
+            headers: headers
+        })).json()
+        img = response['photos']["url"];
+    }
     return (
-        <div className="flex justify-between items-center p-2 w-full min-w-full max-w-full border-b-gray-500 border rounded-b my-14">
-            <Image
-                src={"https://images.pexels.com/photos/10229299/pexels-photo-10229299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
-                width={275}
-                height={275}
-                alt="Image of Blog"
-                className="rounded"
-            />
+        <div className="sm:flex justify-around w-11/12 lg:w-7/12 items-center xl:w-[50%] 2xl:w-[34%] mx-auto md:p-2 px-0  border border-gray-500 max-w-full rounded my-14 scale-100 transition-all duration-500 ease-in-out md:hover:scale-[1.1] md:hover:transition-all md:hover:duration-500 md:hover:ease-in-out md:hover:shadow-lg md:hover:shadow-gray-500">
+            <div className="relative w-full h-[255px] rounded-t sm:w-[305px] lg:w-[225px] sm:h-[225px]">
+                <Image
+                    src={img ? img : ""}
+                    fill
+                    alt="Image of Blog"
+                    className="rounded"
+                />
+            </div>
 
-            <section className="p-1 w-3/5 max-w-3/5 lg:w-2/3 lg:max-w-2/3">
-                <div className="p-1">
-                    <div>
-                        <text className="text-white text-2xl font-mono underline mb-1">
-                            Blog Post 1
-                        </text>
-                    </div>
-                    <div>
-                        <text className="break-words text-white mt-1 font-sans">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum sagittis risus, et vulputate dui facilisis vitae.
-                            Phasellus placerat eu arcu condimentum vehicula. Nunc quis posuere metus. Quisque iaculis odio turpis, ut sodales libero tempus non.
-                            Interdum et malesuada fames ac ante ipsum primis in faucibus
-                        </text>
-                    </div>
+            <section className="p-1 w-full lg:w-[55%] lg:max-w-2/3 h-[200px] flex flex-col lg:items-start items-center justify-around">
+                <div>
+                    <text className="text-white text-xl md:text-2xl font-mono underline mb-1">
+                        {title}
+                    </text>
                 </div>
-                <div className="p-1 mx-auto flex justify-end w-full lg:justify-center lg:mt-3">
-                    <button className="rounded-full py-1 px-3.5 bg-cyan-500 hover:bg-cyan-400">
-                        <text className="text-white font-mono text-lg">
-                        Read More
-                        </text>
-                    </button>
+                <div className="flex justify-start flex-wrap items-start">
+                    {tags.map((tag) => (
+                        <div className="bg-slate-400 px-2 py-1 rounded-full text-sm mx-1 my-1">
+                            #{tag}
+                        </div>
+                    ))}
+                </div>
+                <div className="p-0.5 mx-auto flex justify-center w-full lg:justify-center mt-3">
+                    <a href={mediumLink} className="rounded-full py-1 px-3.5 bg-green-700 hover:bg-green-500-400 text-white font-mono text-lg" target="_blank">
+                        Read More..
+                    </a>
                 </div>
             </section>
 
