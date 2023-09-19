@@ -40,7 +40,7 @@ export default function Navbar({ path, show }: { path: String, show: Boolean }) 
                     ))}
                 </div>
             </nav>
-            <div className={`${!open ? "invisible fixed max-h-0" : "fixed visible max-h-96"} mt-1 overflow-hidden transition-all duration-[650ms] ease-in-out w-[94%] left-[3%] mx-auto bg-gray-800 z-20 border-b border-gray-500 lg:hidden rounded-xl`}>
+            <div className={`${!open ? "invisible fixed max-h-0" : "fixed visible max-h-96"} mt-1 overflow-hidden transition-all duration-[650ms] ease-in-out w-[94%] left-[3%] mx-auto bg-[#201D1D] z-20 border-b border-gray-500 lg:hidden rounded-xl`}>
                 {["About", "Blogs", "Projects", "Work", "Contact"].map((val, idx) => (
                     <div key={idx} className={`w-full border-gray-500 p-3 ${val === "Contact"? "" : "border-b"} text-center`}>
                         <NavLink path={val.toLowerCase()} text={val} currentPath={path}  />

@@ -1,11 +1,12 @@
-'use client'
+"use client"
 import { JetBrains_Mono, Rubik_Mono_One } from 'next/font/google';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 import ParentContainer from './components/parent-container';
+import Navbar from './components/nav-bar';
 
 const jetBrainsMono = JetBrains_Mono({ weight: "600", style: "normal", subsets: ["vietnamese"] });
-const rubikMonoOne = Rubik_Mono_One({weight: "400", style: "normal", display: "swap", subsets: ["cyrillic"]});
+const rubikMonoOne = Rubik_Mono_One({ weight: "400", style: "normal", display: "swap", subsets: ["cyrillic"] });
 
 function NavigationText(props: { text: string }) {
   return (
@@ -18,47 +19,50 @@ function NavigationText(props: { text: string }) {
 export default function Home() {
   return (
     <ParentContainer show={false} path={"/"} showBorder={false}>
-        <div className={`mx-auto min-w-full`} style={{ minHeight: "90%", maxHeight: "90%", display: "flex", alignItems: "center" }}>
-          <div className='text-center mx-auto h-full' style={{ minHeight: "100%", maxHeight: "100%" }}>
-            <text className='text-center font-mono text-4xl md:text-6xl text-white'>
-              I AM
-            </text>
-            <div className={`min-w-full max-w-full break-normal text-4xl md:text-6xl text-green-600 ${rubikMonoOne.className}`} style={{ marginTop: "15px" }}>
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString("A FULL STACK DEVELOPER")
-                    .start()
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString("A MOBILE DEVELOPER")
-                    .start()
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString("ATHARVA SUNE.")
-                    .stop()
-                }}
-              />
-            </div>
+      <nav className='md:hidden'>
+        <Navbar path="/" show={true} />
+      </nav>
+      <div className={`mx-auto min-w-full h-full md:h-[90%] xl:h-[90%] flex items-center justify-center`} >
+        <div className='text-center mx-auto p-2' >
+          <text className='text-center font-mono text-4xl md:text-6xl text-white'>
+            I AM
+          </text>
+          <div className={`min-w-full max-w-full break-normal text-4xl md:text-6xl text-green-600 ${rubikMonoOne.className} mt-[15px]`}>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("A FULL STACK DEVELOPER")
+                  .start()
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .typeString("A MOBILE DEVELOPER")
+                  .start()
+                  .pauseFor(1500)
+                  .deleteAll()
+                  .typeString("ATHARVA SUNE.")
+                  .stop()
+              }}
+            />
           </div>
         </div>
+      </div>
 
-        <div className='px-2 pb-4 md:pb-0 w-full md:w-5/12 mx-auto min-h-[10%] max-h-[10%] h-[10%] flex items-end md:items-center justify-between'>
-          <Link href="/about">
-            <NavigationText text={"About"} />
-          </Link>
-          <Link href="/blogs">
-            <NavigationText text='Blogs' />
-          </Link>
-          <Link href="/projects">
-            <NavigationText text='Projects' />
-          </Link>
-          <Link href="/work">
-            <NavigationText text='Work' />
-          </Link>
-          <Link href="/contact">
-            <NavigationText text='Contact' />
-          </Link>
-        </div>
+      <div className='hidden px-3 pb-3 md:pb-0 w-full md:w-[75%] lg:1/2 xl:w-5/12 mx-auto md:flex items-end md:items-center justify-between'>
+        <Link href="/about">
+          <NavigationText text={"About"} />
+        </Link>
+        <Link href="/blogs">
+          <NavigationText text='Blogs' />
+        </Link>
+        <Link href="/projects">
+          <NavigationText text='Projects' />
+        </Link>
+        <Link href="/work">
+          <NavigationText text='Work' />
+        </Link>
+        <Link href="/contact">
+          <NavigationText text='Contact' />
+        </Link>
+      </div>
     </ParentContainer>
   )
 }

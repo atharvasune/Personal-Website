@@ -38,7 +38,7 @@ export default async function Blogs() {
     }
 
     return (
-        <ParentContainer show={true} path={"blogs"} showBorder={false}>
+        <ParentContainer show={true} path={"blogs"} showBorder={false} className="overflow-y-auto">
             {mediumPosts.map(function (blog: Item, idx: Number) {
                 return (
                 <>

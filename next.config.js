@@ -9,6 +9,10 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "*.medium.com",
+            },
+            {
+                protocol: "https",
+                hostname: "lh3.googleusercontent.com"
             }
         ]
     }

@@ -41,7 +41,7 @@ export default async function Projects() {
     const githubResponses: GitHubResponse[] | undefined = await getProjects();
     const images: any = await getImages(githubResponses?githubResponses.length: 15);
     return (
-        <ParentContainer show={true} path={"projects"} showBorder={false} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-y-10 py-4 pt-8 justify-items-center w-full" >
+        <ParentContainer show={true} path={"projects"} showBorder={false} className="overflow-y-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-y-10 py-4 pt-8 justify-items-center w-full" >
             {githubResponses ?
                 <>
                     {githubResponses.map(async (githubResponse, idx) => {
