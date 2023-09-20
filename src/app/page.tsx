@@ -2,8 +2,8 @@
 import { JetBrains_Mono, Rubik_Mono_One } from 'next/font/google';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
-import ParentContainer from './components/parent-container';
-import Navbar from './components/nav-bar';
+import ParentContainer from '@/components/parent-container';
+import Navbar from '@/components/nav-bar';
 
 const jetBrainsMono = JetBrains_Mono({ weight: "600", style: "normal", subsets: ["vietnamese"] });
 const rubikMonoOne = Rubik_Mono_One({ weight: "400", style: "normal", display: "swap", subsets: ["cyrillic"] });

@@ -1,4 +1,4 @@
-import ParentContainer from "../components/parent-container";
+import ParentContainer from "@/components/parent-container";
 import BlogCard from "./blog-card";
 import { XMLParser } from "fast-xml-parser";
 
@@ -17,7 +17,7 @@ type Item = {
 async function fetchMediumPosts() {
     const parser: XMLParser = new XMLParser({ allowBooleanAttributes: true });
     try {
-        let response = await fetch("https://medium.com/feed/@atharvasune");
+        let response = await fetch("https://medium.com/feed/@atharvasune", {cache: 'no-store'});
         let responseText = await response.text();
         let mediumResponse = parser.parse(responseText);
         return mediumResponse.rss.channel.item;

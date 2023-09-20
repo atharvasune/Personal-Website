@@ -10,7 +10,7 @@ export default function ParentContainer({ show, path, showBorder, className, chi
     return (
         <main className="min-h-screen max-h-screen h-screen transition-transform duration-300 ease-linear" suppressHydrationWarning>
             <Navbar show={show} path={path} />
-            <div className={`${lowerDivHeight} ${borderClasses} overflow-y-auto ${className}`}>
+            <div className={`${lowerDivHeight} ${borderClasses} ${className}`}>
                 {children}
             </div>
         </main>
