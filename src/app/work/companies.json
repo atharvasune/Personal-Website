@@ -1,0 +1,69 @@
+[
+  {
+    "company": "Oracle",
+    "started": "July 2021",
+    "isCurrent": true,
+    "ended": "",
+    "roles": [
+      {
+        "role": "Applications Engineer",
+        "team": "Fusion Release Engineering",
+        "projects": [
+          {
+            "projectName": "SPMV CLI",
+            "description": "Developer Productivity Tool to enable local build for testing using darwin-tools engine",
+            "techStack": ["Docker", "Shell", "Java", "Podman", "Minikube"]
+          },
+          {
+            "projectName": "UniSearch",
+            "description": "Central Codesearch platform for Oracle Fusion Apps Repositories",
+            "techStack": [
+              "OCI",
+              "Java",
+              "Lucene",
+              "Helidon",
+              "Ojet",
+              "Docker",
+              "Kubernetes"
+            ]
+          },
+          {
+            "projectName": "Darwin Tools",
+            "description": "Core framework behind the central CI/CD platform used by fusion apps teams across Oracle to build and deliver their applications successfully",
+            "techStack": [
+                "OCI Streaming",
+                "Java",
+                "Docker",
+                "Groovy",
+                "Jenkins"
+            ]
+          }
+        ]
+      }
+    ]
+  }, 
+  {
+    "company": "Amazon",
+    "started": "January 2021",
+    "isCurrent": false,
+    "ended": "June 2021",
+    "roles": [
+        {
+            "role": "Software Development Engineer - Intern",
+            "team": "Search Engine Technologies",
+            "projects": [
+                {
+                    "projectName": "Semantic Searching Optimization",
+                    "description": "Optimize the KNN Searching operation in Lucene and integrate with Amazon's Search Engine (built on top of Lucene)",
+                    "techStack": [
+                        "Java",
+                        "Lucene",
+                        "Python",
+                        "Spring Boot"
+                    ]
+                }
+            ]
+        }
+    ]
+  }
+]

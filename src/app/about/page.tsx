@@ -1,8 +1,8 @@
 "use client";
 
-import ParentContainer from "../components/parent-container";
+import ParentContainer from "@/components/parent-container";
 import Image from "next/image";
-import Tab from "./tab";
+import Tab from "@/components/tab";
 import { AboutMe, TechnicalSkills } from "./sections";
 import React from "react";
 

@@ -1,6 +1,6 @@
-import ParentContainer from "../components/parent-container";
+import ParentContainer from "@/components/parent-container";
 import ProjectCard from "./project-card";
-import { GitHubResponse } from "./types";
+import { GitHubResponse } from "@/types";
 
 
 
@@ -10,7 +10,7 @@ async function getProjects(): Promise<GitHubResponse[] | undefined> {
     try {
         const headers = new Headers()
         headers.append("Authorization", `token ${process.env.GITHUB_API_TOKEN}`);
-        let githubResponses: GitHubResponse[] = await (await fetch("https://api.github.com/users/atharvasune/repos", { headers: headers })).json();
+        let githubResponses: GitHubResponse[] = await (await fetch("https://api.github.com/users/atharvasune/repos", { headers: headers, cache: 'no-store'} )).json();
         githubResponses = githubResponses.filter((githubResponse) => githubResponse.private === false && !(githubResponse.name === "youtube-dl"))
         return githubResponses;
 

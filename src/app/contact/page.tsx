@@ -1,4 +1,4 @@
-import ParentContainer from "../components/parent-container";
+import ParentContainer from "@/components/parent-container";
 import {FaGithub, FaEnvelope, FaTwitter, FaMedium, FaLinkedinIn} from "react-icons/fa6"
 
 function ContactLink({ text, link, icon }: { text: string, link: string, icon: JSX.Element }) {
