@@ -24,8 +24,8 @@ export default function About() {
                 </div>
             </div>
             
-            <div className="w-full md:w-1/2 lg:w-3/5 h-full flex justify-start items-center flex-col p-2">
-                <div id="tab-container" className="w-full min-h-[50px] h-[7%] md:h-[5%] flex justify-around bg-[#28282B] rounded-md mb-[1%] p-2">
+            <div className="w-full md:w-1/2 lg:w-3/5 h-full flex justify-start items-center flex-col p-2 transition-all duration-1000 ease-in-out">
+                <div id="tab-container" className="relative w-full min-h-[50px] h-[7%] md:h-[5%] flex justify-around bg-[#28282B] rounded-md mb-[1%] p-2">
                     {["About", "Technical Skills"].map((tabName, idx) => <Tab key={idx} name={tabName} id={idx} activeId={activeId} setActiveId={setActiveId}/>)}
                 </div>
                 <div className="w-full text-center mx-auto p-3 h-fit md:h-[94%] bg-[#28282B] rounded-lg md:overflow-y-auto">
