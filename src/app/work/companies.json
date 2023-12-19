@@ -6,6 +6,22 @@
     "ended": "",
     "roles": [
       {
+        "role": "Senior Software Engineer",
+        "team": "Fusion Release Engineering",
+        "projects": [
+          {
+            "projectName": "SPMV VsCode Extension",
+            "description": "VsCode Extension to use SPMV CLI natively from inside the editor. Automates tasks like setting up, configuration settings, triggering and deleting builds and showing results to the user.",
+            "techStack": ["Typescript", "VsCode API", "NodeJS"]
+          },
+          {
+            "projectName": "ODA Chatbot",
+            "description": "An intelligent digital assistant to facilitate seamless interaction with FRE products and answer any questions related to them",
+            "techStack": ["OCI Oracle Digital Assistant", "NodeJS", "Typescript", "Java", "Helidon", "OCI Stream"]
+          }
+        ]
+      },
+      {
         "role": "Applications Engineer",
         "team": "Fusion Release Engineering",
         "projects": [
